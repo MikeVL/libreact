@@ -1,5 +1,5 @@
 {
-  "name": "libreact",
+  "name": "@mikevl/libreact",
   "version": "2.13.3",
   "description": "React standard library",
   "main": "lib/index.js",
