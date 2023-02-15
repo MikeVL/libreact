@@ -77,7 +77,6 @@ const defaultState = {
 
 export class Media<P extends IMediaProps<M>, S extends IMediaState, M extends IMedia> extends React.Component<P, S> implements IMedia {
   tag: 'video' | 'audio' = 'video';
-  props: P;
   el: HTMLMediaElement = null;
 
   state: S = defaultState as S;

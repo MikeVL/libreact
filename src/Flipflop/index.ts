@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {h} from '../util';
 import {State} from '../State';
 import renderProp from '../util/renderProp';
@@ -7,7 +8,7 @@ export interface IFlipflopProps {
   init?: boolean;
 }
 
-export const Flipflop: React.StatelessComponent<IFlipflopProps> = (props) => {
+export const Flipflop: React.FunctionComponent<IFlipflopProps> = (props) => {
   const initialState = props.init || false;
 
   return h(State, {

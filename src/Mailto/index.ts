@@ -1,4 +1,5 @@
 // Original: https://github.com/jaredpalmer/react-fns/blob/master/src/Mailto.tsx
+import * as React from 'react';
 import {h} from '../util';
 import {stringify} from 'qs';
 
@@ -10,7 +11,7 @@ export interface IMailtoProps extends React.HTMLAttributes<HTMLAnchorElement> {
   body?: string;
 }
 
-export const Mailto: React.StatelessComponent<IMailtoProps> = ({
+export const Mailto: React.FunctionComponent<IMailtoProps> = ({
   email,
   subject = '',
   cc,

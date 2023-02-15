@@ -1,4 +1,4 @@
-import {cloneElement} from 'react';
+import React, { cloneElement } from 'react';
 import {h} from '../util';
 import {Value} from '../Value';
 import renderProp from '../util/renderProp';
@@ -8,7 +8,7 @@ export interface IFocusSensorProps {
   bond?: boolean | string;
 }
 
-export const FocusSensor: React.StatelessComponent<IFocusSensorProps> = (props: IFocusSensorProps) => {
+export const FocusSensor: React.FunctionComponent<IFocusSensorProps> = (props: IFocusSensorProps) => {
   let {bond} = props;
 
   return Value({

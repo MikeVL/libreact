@@ -1,6 +1,7 @@
 import {loadable} from '../loadable';
-import {Component, createElement as h} from 'react';
+import {createElement as h} from 'react';
 import {shallow, mount} from 'enzyme';
+import {setImmediate} from 'timers'
 
 declare const Promise;
 

@@ -35,7 +35,7 @@ export class WindowWidthSensor extends Component<IWindowWidthSensorProps, IWindo
     off(window, 'resize', this.onResize);
   }
 
-  onResize = throttle(this.props.throttle, false, () => {
+  onResize = throttle(this.props.throttle, () => {
     const width = window.innerWidth;
 
     if (width !== this.state.width) {

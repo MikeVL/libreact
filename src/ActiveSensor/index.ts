@@ -1,4 +1,4 @@
-import {cloneElement} from 'react';
+import React, { cloneElement } from 'react';
 import {h} from '../util';
 import {Value} from '../Value';
 import renderProp from '../util/renderProp';
@@ -8,7 +8,7 @@ export interface IActiveSensorProps {
   bond?: boolean | string;
 }
 
-export const ActiveSensor: React.StatelessComponent<IActiveSensorProps> = (props: IActiveSensorProps) => {
+export const ActiveSensor: React.FunctionComponent<IActiveSensorProps> = (props: IActiveSensorProps) => {
   let {bond} = props;
 
   return Value({

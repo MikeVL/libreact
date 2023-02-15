@@ -16,7 +16,6 @@ export interface IBatterySensorState {
 }
 
 export class BatterySensor extends Component<IBatterySensorProps, IBatterySensorState> {
-  state: IBatterySensorState;
   mounted: boolean;
   battery;
 

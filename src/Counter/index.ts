@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {Value, faccToHocInit} from '../Value';
 import renderProp from '../util/renderProp';
 
@@ -5,7 +6,7 @@ export interface ICounterProps {
   init?: number;
 }
 
-export const Counter: React.StatelessComponent<ICounterProps> = (props) => {
+export const Counter: React.FunctionComponent<ICounterProps> = (props) => {
   return Value({
     init: props.init || 0,
     render: (state) => renderProp(props, Object.assign(state, {

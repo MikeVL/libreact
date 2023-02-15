@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {h} from '../util';
 import {State} from '../State';
 import renderProp from '../util/renderProp';
@@ -9,7 +10,7 @@ export interface IValueProps {
   render?: (state) => React.ReactElement<any>;
 }
 
-export const Value: React.StatelessComponent<IValueProps> = (props) => {
+export const Value: React.FunctionComponent<IValueProps> = (props) => {
   return h(State, {
     init: {
       value: props.init

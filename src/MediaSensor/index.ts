@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import * as React from 'react';
 import {isClient} from '../util';
 import faccToHoc from '../util/faccToHoc';
 import renderProp from '../util/renderProp';
@@ -8,17 +8,16 @@ export interface IMediaSensorProps {
   query: string;
   children?: React.ReactElement<any> | ((match: boolean) => React.ReactElement<any>);
   render?: React.ReactElement<any> | ((match: boolean) => React.ReactElement<any>);
-  comp?: React.StatelessComponent<IMediaSensorState> | React.ComponentClass<IMediaSensorState>;
-  component?: React.StatelessComponent<IMediaSensorState> | React.ComponentClass<IMediaSensorState>;
+  comp?: React.FunctionComponent<IMediaSensorState> | React.ComponentClass<IMediaSensorState>;
+  component?: React.FunctionComponent<IMediaSensorState> | React.ComponentClass<IMediaSensorState>;
 }
 
 export interface IMediaSensorState {
   matches: boolean;
 }
 
-export class MediaSensor extends Component<IMediaSensorProps, IMediaSensorState> {
+export class MediaSensor extends React.Component<IMediaSensorProps, IMediaSensorState> {
   mql: MediaQueryList;
-  state: IMediaSensorState;
   mounted = false;
 
   constructor (props, context) {

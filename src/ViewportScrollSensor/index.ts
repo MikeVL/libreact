@@ -114,7 +114,7 @@ export class ViewportScrollSensor extends React.Component<IViewportScrollSensorP
     }
   }
 
-  onScroll = throttle(this.props.throttle, false, () => {
+  onScroll = throttle(this.props.throttle, () => {
     if (!this.mounted) {
       return;
     }

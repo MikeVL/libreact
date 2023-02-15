@@ -1,3 +1,4 @@
+import React from 'react';
 import {lazy, ILazyParams, ILazyComponent} from './lazy';
 
 const wait = (loader, delay) => new Promise((resolve) =>
@@ -30,19 +31,19 @@ export const delayed: TDelayed = <TProps>(params: IDelayedParams<TProps>) => {
   if (delay) {
     const loader = params.loader;
 
-    params.loader = () => wait(loader, delay) as Promise<React.ComponentClass<any> | React.StatelessComponent<any>>;
+    params.loader = () => wait(loader, delay) as Promise<React.ComponentClass<any> | React.FunctionComponent<any>>;
   }
 
   if (idle) {
     const loader = params.loader;
 
-    params.loader = () => PRIC(loader) as Promise<React.ComponentClass<any> | React.StatelessComponent<any>>;
+    params.loader = () => PRIC(loader) as Promise<React.ComponentClass<any> | React.FunctionComponent<any>>;
   }
 
   if (draf) {
     const loader = params.loader;
 
-    params.loader = () => loader().then(PRAF).then(PRAF) as Promise<React.ComponentClass<any> | React.StatelessComponent<any>>;
+    params.loader = () => loader().then(PRAF).then(PRAF) as Promise<React.ComponentClass<any> | React.FunctionComponent<any>>;
   }
 
   return lazy(params);

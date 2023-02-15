@@ -2,9 +2,14 @@ import {Component, Children} from 'react';
 import {h, noop} from '../util';
 const screenfull = require('screenfull');
 
+export interface VideoElement extends HTMLVideoElement {
+    webkitEnterFullScreen: typeof document.documentElement.requestFullscreen;
+    webkitExitFullscreen: typeof document.exitFullscreen;
+}
+
 export interface IFullScreenProps {
   children?;
-  video?: HTMLVideoElement;
+  video?: VideoElement;
   innerRef?: (el) => void;
   on?: boolean;
   onClose?: () => void;
@@ -57,7 +62,7 @@ export class FullScreen extends Component<IFullScreenProps, IFullScreenState> {
       } else {
         const {video} = this.props;
 
-        if (video && video.webkitEnterFullscreen) {
+        if (video && video.requestFullscreen()) {
           const onWebkitEndFullscreen = () => {
             video.removeEventListener('webkitendfullscreen', onWebkitEndFullscreen);
             if (this.mounted) {
@@ -65,7 +70,7 @@ export class FullScreen extends Component<IFullScreenProps, IFullScreenState> {
             }
           };
 
-          video.webkitEnterFullscreen();
+          video.webkitEnterFullScreen();
           video.addEventListener('webkitendfullscreen', onWebkitEndFullscreen);
         }
       }

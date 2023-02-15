@@ -87,7 +87,7 @@ export class IdleSensor extends Component<IIdleSensorProps, IIdleSensorState> {
     }
   };
 
-  onEvent = throttle(this.props.throttle, false, () => {
+  onEvent = throttle(this.props.throttle, () => {
     if (this.state.idle) {
       this.change(false);
     }

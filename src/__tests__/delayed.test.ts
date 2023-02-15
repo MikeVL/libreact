@@ -1,5 +1,5 @@
-import {Component, createElement as h} from 'react';
-import {mount, shallow} from 'enzyme';
+import {createElement as h} from 'react';
+import {mount} from 'enzyme';
 import {delayed} from '../delayed';
 
 describe('delayed()', () => {
@@ -54,7 +54,7 @@ describe('delayed()', () => {
 
     expect(Boolean(wrapper.html())).toBe(false);
 
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       setTimeout(() => {
         try {
           wrapper.update();
@@ -80,7 +80,7 @@ describe('delayed()', () => {
       children: 'foobar'
     } as any));
 
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       setTimeout(() => {
         try {
           wrapper.update();
@@ -94,7 +94,7 @@ describe('delayed()', () => {
   });
 
   it('waits for DRAF after loaded', () => {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       let wrapper;
 
       const Implementation = () => h('div', {}, 'IMPLEMENTATION');

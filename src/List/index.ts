@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {Value, faccToHocInit} from '../Value';
 import renderProp from '../util/renderProp';
 
@@ -5,7 +6,7 @@ export interface IListProps {
   init?: any[];
 }
 
-export const List: React.StatelessComponent<IListProps> = (props) => {
+export const List: React.FunctionComponent<IListProps> = (props) => {
   return Value({
     init: Array.isArray(props.init) ? props.init : [],
     render: (state) => {

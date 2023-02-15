@@ -21,8 +21,6 @@ export class State extends Component<IStateProps, IStateState> {
     onUnmount: noop
   };
 
-  state: IStateState;
-
   constructor (props, context) {
     super(props, context);
 

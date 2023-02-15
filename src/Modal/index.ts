@@ -30,7 +30,6 @@ export class Modal extends Component<IModalProps, IModalState> {
   id: number;
   el: HTMLElement = null;
   activeEl: Element; // Previous active element;
-  state;
 
   constructor (props, context) {
     super(props, context);

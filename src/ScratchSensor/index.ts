@@ -1,4 +1,3 @@
-import {IScratchSensorState} from './index';
 import {Component, cloneElement} from 'react';
 import {noop, on, off} from '../util';
 import {render, createEnhancer} from 'react-universal-interface';

@@ -1,11 +1,11 @@
-import {createElement as h} from 'react';
+import React, { createElement as h } from 'react';
 import {loadable, ILoadableParams} from './loadable';
 
 export interface ILazyParams<TProps> extends ILoadableParams<TProps> {
 
 }
 
-export interface ILazyComponent<TProps> extends React.SFC<TProps> {
+export interface ILazyComponent<TProps> extends React.FunctionComponent<TProps> {
   load();
 }
 

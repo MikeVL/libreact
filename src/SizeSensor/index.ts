@@ -24,7 +24,6 @@ export class SizeSensor extends React.Component<ISizeSensorProps, ISizeSensorSta
 
   iframe;
   timeout;
-  props: ISizeSensorProps;
   window: Window;
 
   componentDidMount () {

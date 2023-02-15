@@ -1,3 +1,4 @@
+import * as React from 'react';
 import renderProp from '../util/renderProp';
 import {Value, faccToHocInit} from '../Value';
 
@@ -5,7 +6,7 @@ export interface IMapProps {
   init?: {[key: string]: any};
 }
 
-export const Map: React.StatelessComponent<IMapProps> = (props) => {
+export const Map: React.FunctionComponent<IMapProps> = (props) => {
   return Value({
     init: props.init && (typeof props.init === 'object') ? props.init : {},
     render: ({value, set}) => renderProp(props, {

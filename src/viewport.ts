@@ -7,12 +7,12 @@ export interface IViewportParams {
   placeholder: React.ReactElement<any>;
 }
 
-export type TViewport = <P>(Comp: React.StatelessComponent<P> | React.ComponentClass<P>, params: IViewportParams) => React.ComponentClass<P>;
+export type TViewport = <P>(Comp: React.FunctionComponent<P> | React.ComponentClass<P>, params: IViewportParams) => React.ComponentClass<P>;
 
 export const viewport = (Comp, {placeholder = pixel} = {}) => {
   let flipped = false;
 
-  const Viewport = class Viewport extends React.Component<any, any> {
+  return class Viewport extends React.Component<any, any> {
     onChange = () => {
       flipped = true;
       this.forceUpdate();
@@ -23,7 +23,5 @@ export const viewport = (Comp, {placeholder = pixel} = {}) => {
         h(Comp, this.props) :
         h(ViewportSensor, {onChange: this.onChange}, placeholder)
     }
-  }
-
-  return Viewport;
+  };
 };

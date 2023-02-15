@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {h} from '../util';
 import {ViewportObserverSensor, IViewportObserverSensorProps} from '../ViewportObserverSensor';
 import {loadable} from '../loadable';
@@ -13,7 +14,7 @@ if (typeof window === 'object') {
   }
 }
 
-export const ViewportSensor: React.StatelessComponent<IViewportObserverSensorProps> = (props) => {
+export const ViewportSensor: React.FunctionComponent<IViewportObserverSensorProps> = (props) => {
   return h(Sensor, props);
 };
 

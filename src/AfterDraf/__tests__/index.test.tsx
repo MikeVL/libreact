@@ -1,5 +1,4 @@
 import {createElement as h} from 'react';
-import {render} from 'react-dom';
 import {AfterDraf} from '..';
 import RAF from '../RAF';
 

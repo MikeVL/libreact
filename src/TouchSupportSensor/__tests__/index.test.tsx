@@ -33,7 +33,7 @@ describe.only("<TouchSupportSensor>", () => {
   });
 
   it("renders nothing when onlyTouch is true and the device doesn't support touch", () => {
-    const component = mount(<TouchSupportSensor onlyTouch>(location) => <div /></TouchSupportSensor>)
+    const component = mount(<TouchSupportSensor onlyTouch>{(location) => <div />}</TouchSupportSensor>)
 
     expect(component.find('div')).toHaveLength(0)
   })
@@ -41,7 +41,7 @@ describe.only("<TouchSupportSensor>", () => {
   it("renders nothing when onlyMouse is true and the device does support touch", () => {
     window.ontouchstart = () => null
 
-    const component = mount(<TouchSupportSensor onlyMouse>(location) => <div /></TouchSupportSensor>)
+    const component = mount(<TouchSupportSensor onlyMouse>{(location) => <div />}</TouchSupportSensor>)
 
     expect(component.find('div')).toHaveLength(0)
 
@@ -51,7 +51,7 @@ describe.only("<TouchSupportSensor>", () => {
   it("renders children when onlyTouch is true and the device does support touch", () => {
     window.ontouchstart = () => null
 
-    const component = mount(<TouchSupportSensor onlyTouch>(location) => <div /></TouchSupportSensor>)
+    const component = mount(<TouchSupportSensor onlyTouch>{(location) => <div />}</TouchSupportSensor>)
 
     expect(component.find('div')).toHaveLength(1)
 
@@ -59,7 +59,7 @@ describe.only("<TouchSupportSensor>", () => {
   })
 
   it("renders children when onlyMouse is true and the device doesn't support touch", () => {
-    const component = mount(<TouchSupportSensor onlyMouse>(location) => <div /></TouchSupportSensor>)
+    const component = mount(<TouchSupportSensor onlyMouse>{(location) => <div />}</TouchSupportSensor>)
 
     expect(component.find('div')).toHaveLength(1)
   })
