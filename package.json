@@ -33,7 +33,7 @@
     "postinstall": "opencollective-postinstall"
   },
   "dependencies": {
-    "fast-af": "^0.1.0",
+    "fast-af": "^0.3.0",
     "nano-css": "^1.13.0",
     "opencollective-postinstall": "^2.0.1",
     "react-focus-lock": "1.6.5",
