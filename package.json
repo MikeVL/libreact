@@ -51,7 +51,7 @@
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/git": "^5.0.0",
     "@semantic-release/npm": "^3.3.1",
-    "@storybook/addon-actions": "^3.3.10",
+    "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-links": "^3.3.10",
     "@storybook/react": "^3.3.10",
     "@types/chai": "4.1.1",
