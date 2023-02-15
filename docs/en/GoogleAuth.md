@@ -13,7 +13,7 @@ Then wrap your entire app with `<Provider>` component and anywhere in your app u
 ```js
 import {createGoogleAuthContext} from 'libreact/lib/GoogleAuth';
 
-const {Provider, Conumer} = createGoogleAuthContext({
+const {Provider, Consumer} = createGoogleAuthContext({
   client_id: 'xxxxxxxx-yyyyyyyyyyyyyyyy.apps.googleusercontent.com',
 });
 
