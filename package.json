@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "fast-af": "^0.1.0",
-    "nano-css": "^1.13.0",
+    "nano-css": "^5.3.5",
     "opencollective-postinstall": "^2.0.1",
     "react-focus-lock": "1.6.5",
     "react-universal-interface": "^0.3.1",
