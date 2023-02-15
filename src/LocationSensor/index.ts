@@ -44,7 +44,6 @@ export interface ILocationSensorState {
 }
 
 export class LocationSensor extends Component<ILocationSensorProps, ILocationSensorState> {
-  state: ILocationSensorState;
 
   constructor (props, context) {
     super(props, context);

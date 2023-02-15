@@ -12,7 +12,6 @@ export const createSingleRunDraf = isClient
 
     return class extends React.Component<{}, IAfterDrafState> {
       frame;
-      state: IAfterDrafState;
 
       constructor (props, context) {
         super(props, context);

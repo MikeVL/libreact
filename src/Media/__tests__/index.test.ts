@@ -1,3 +1,4 @@
+import {setImmediate} from 'timers'
 import {Media} from '..';
 
 const createMedia = () => new Media<any, any, any>({}, {});
@@ -68,7 +69,7 @@ describe('<Media>', () => {
       expect(play).toHaveBeenCalledTimes(1);
       expect(pause).toHaveBeenCalledTimes(0);
 
-      return new Promise((resolve, reject) => {
+      return new Promise<void>((resolve, reject) => {
         setImmediate(() => {
           try {
             media.pause();

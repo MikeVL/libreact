@@ -19,7 +19,6 @@ export class SyncSensor<TState> extends React.Component<ISyncSensorProps<TState>
   };
 
   frame;
-  state: TState;
   onEvent;
 
   constructor (props, context) {
@@ -27,7 +26,7 @@ export class SyncSensor<TState> extends React.Component<ISyncSensorProps<TState>
 
     this.state = props.initial || {};
 
-    this.onEvent = throttle(this.props.throttle, false, (event) => {
+    this.onEvent = throttle(this.props.throttle, (event) => {
       const state = this.props.onEvent(event);
 
       this.setState(state, () => {

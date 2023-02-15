@@ -31,7 +31,6 @@ export class Parallax extends React.Component<IParallaxProps, IParallaxState> {
 
   el: HTMLElement;
   mounted: boolean = false;
-  state: IParallaxState;
 
   constructor (props, context) {
     super(props, context);
@@ -68,7 +67,7 @@ export class Parallax extends React.Component<IParallaxProps, IParallaxState> {
     (this.props.onChange || noop)(newState);
   }
 
-  onScroll = throttle(this.props.throttle, false, () => {
+  onScroll = throttle(this.props.throttle, () => {
     if (!this.mounted) {
       return;
     }

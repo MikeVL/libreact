@@ -18,7 +18,6 @@ export interface IMediaSensorState {
 
 export class MediaSensor extends Component<IMediaSensorProps, IMediaSensorState> {
   mql: MediaQueryList;
-  state: IMediaSensorState;
   mounted = false;
 
   constructor (props, context) {

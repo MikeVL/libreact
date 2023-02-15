@@ -70,6 +70,11 @@ export class Ripple extends React.Component<IRippleProps, IRippleState> {
   render () {
     const {children, color} = this.props;
     const element = React.Children.only(children);
+
+    if (!React.isValidElement(element)) {
+      return element;
+    }
+
     const ripple = h('div', {
       className,
       style: {

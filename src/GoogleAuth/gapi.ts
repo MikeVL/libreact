@@ -63,7 +63,7 @@ export const getGapi = async (): Promise<GApi> => {
     return gapiCache;
   }
 
-  await new Promise(resolve => {
+  await new Promise<void>(resolve => {
     const gapicallback = `__gapicb${Date.now().toString(36)}`;
     (window as any)[gapicallback] = () => {
       delete (window as any)[gapicallback];
@@ -89,7 +89,7 @@ export const getGapiAuth2 = async (): Promise<GApiAuth2> => {
 
   const gapi = await getGapi();
 
-  await new Promise(resolve => {
+  await new Promise<void>(resolve => {
     gapi.load('auth2', () => {
       gapiAuth2Cache = gapi.auth2;
       resolve();

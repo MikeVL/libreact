@@ -1,6 +1,7 @@
 import {lazy} from '../lazy';
-import {Component, createElement as h} from 'react';
-import {shallow, mount} from 'enzyme';
+import {createElement as h} from 'react';
+import {mount} from 'enzyme';
+import {setImmediate} from 'timers'
 
 describe('lazy()', () => {
   it('is a function', () => {
@@ -52,7 +53,7 @@ describe('lazy()', () => {
 
     expect(Boolean(wrapper.html())).toBe(false);
 
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       setImmediate(() => {
         try {
           wrapper.update();
@@ -78,7 +79,7 @@ describe('lazy()', () => {
 
     Lazy.load();
 
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       setImmediate(() => {
         try {
           wrapper.update();

@@ -51,7 +51,7 @@ export class OutsideClick extends React.Component<IOutsideClickProps, IOutsideCl
     const {children} = this.props;
     const element = React.Children.only(children);
 
-    if (!element) {
+    if (!React.isValidElement(element)) {
       return null;
     }
 

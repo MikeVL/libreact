@@ -8,7 +8,6 @@ export interface IAfterDrafState {
 export const AfterDraf = isClient
   ? class AfterDraf extends React.Component<{}, IAfterDrafState> {
     frame;
-    state: IAfterDrafState;
 
     constructor (props, context) {
       super(props, context);

@@ -18,7 +18,6 @@ export interface INetworkSensorState {
 }
 
 export class NetworkSensor extends Component<INetworkSensorProps, INetworkSensorState> {
-  state: INetworkSensorState;
 
   get connection () {
     if (typeof navigator !== 'object') {

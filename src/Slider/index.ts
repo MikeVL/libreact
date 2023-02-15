@@ -37,7 +37,6 @@ export class Slider extends React.Component<ISliderProps, ISliderState> {
   CLIENT_X = 'clientX';
   el: HTMLElement = null;
   mounted = false;
-  state;
 
   constructor (props, context) {
     super(props, context);
@@ -124,11 +123,12 @@ export class Slider extends React.Component<ISliderProps, ISliderState> {
 
   onTouchEnd = this.stopScrubbing;
 
-  onScrub = throttle(this.props.throttle, false, (clientX) => {
+  onScrub = throttle(this.props.throttle, (clientX) => {
     if (!this.mounted || !this.el) {
       return;
     }
 
+    // @ts-ignore
     const {[this.LEFT]: pos, [this.WIDTH]: length} = this.el.getBoundingClientRect();
 
     // This prevents returning 0 when element is hidden by CSS.
