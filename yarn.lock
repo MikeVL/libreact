@@ -1227,18 +1227,6 @@
     prop-types "^15.7.2"
     ts-dedent "^2.0.0"
 
-"@storybook/channel-postmessage@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-7.0.23.tgz#eff248def859a0106cb45d535eb13111b8abb2df"
-  integrity sha512-SfXTV55Z9U5rN1OuyR56s+PUpav3b4SgXtP67bnNsrv7dkKhBwr0DUUJogIRnjmY0Loy/hLvJ23kfmKXPWC4vQ==
-  dependencies:
-    "@storybook/channels" "7.0.23"
-    "@storybook/client-logger" "7.0.23"
-    "@storybook/core-events" "7.0.23"
-    "@storybook/global" "^5.0.0"
-    qs "^6.10.0"
-    telejson "^7.0.3"
-
 "@storybook/channel-postmessage@7.0.24":
   version "7.0.24"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-7.0.24.tgz#789bd121cf64e306737ec0f3b096ea0ac6f47bf5"
@@ -1251,22 +1239,10 @@
     qs "^6.10.0"
     telejson "^7.0.3"
 
-"@storybook/channels@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-7.0.23.tgz#4c57f5f43289ca21b6a713ff9c399c8abb6c868a"
-  integrity sha512-cCxR3Z84YQjsVMPgFTI+kDVNOlgXSDakwjkNFBznU+s2qhGW5eZt2g9YRDeVDQ6AjR4j4RrGhwddRq4lQZF2pg==
-
 "@storybook/channels@7.0.24":
   version "7.0.24"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-7.0.24.tgz#fcfe7a1a5599265506f07fe81d03b0585303fc15"
   integrity sha512-NZVLwMhtzy6cZrNRjshFvMAD9mQTmJDNwhohodSkM/YFCDVFhmxQk9tgizVGh9MwY3CYGJ1SI96RUejGosb49Q==
-
-"@storybook/client-logger@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-7.0.23.tgz#5db5d144d1948fd8c856195ee6a699c002046557"
-  integrity sha512-L287SRO8EaYOxTpryV7N/1WCL5I1IFs5Naiq3FpybhguUP7F3Si7KWvVdFmSW06K9jNj2IEQ/8zBRM8ra4ttyg==
-  dependencies:
-    "@storybook/global" "^5.0.0"
 
 "@storybook/client-logger@7.0.24":
   version "7.0.24"
@@ -1323,11 +1299,6 @@
     pretty-hrtime "^1.0.3"
     resolve-from "^5.0.0"
     ts-dedent "^2.0.0"
-
-"@storybook/core-events@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.0.23.tgz#99d36712dba8eae9e1585298dd9b97385ae13ad5"
-  integrity sha512-Hdt18p/qbgJc+1wY2dGcdjmlsuNXWsoLTaXrjInuvr1U0kmKmKs0VMaB0cFubnUgCmB3YQWTGnVr3q8iz9iB7g==
 
 "@storybook/core-events@7.0.24":
   version "7.0.24"
@@ -1389,27 +1360,6 @@
     chalk "^4.1.0"
     npmlog "^5.0.1"
     pretty-hrtime "^1.0.3"
-
-"@storybook/preview-api@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/preview-api/-/preview-api-7.0.23.tgz#6f4d98a54c7367341e086a1818866e2e1e97faea"
-  integrity sha512-kXhDX6gVjQu4Lx4SnCW5Yt5W/TbQofp9SL0paB1ywsJ15xSAPU5KVILe9OWAOba2YUnk7sHux/xDX/gH5RCpVw==
-  dependencies:
-    "@storybook/channel-postmessage" "7.0.23"
-    "@storybook/channels" "7.0.23"
-    "@storybook/client-logger" "7.0.23"
-    "@storybook/core-events" "7.0.23"
-    "@storybook/csf" "^0.1.0"
-    "@storybook/global" "^5.0.0"
-    "@storybook/types" "7.0.23"
-    "@types/qs" "^6.9.5"
-    dequal "^2.0.2"
-    lodash "^4.17.21"
-    memoizerific "^1.11.3"
-    qs "^6.10.0"
-    synchronous-promise "^2.0.15"
-    ts-dedent "^2.0.0"
-    util-deprecate "^1.0.2"
 
 "@storybook/preview-api@7.0.24":
   version "7.0.24"
@@ -1482,16 +1432,6 @@
     "@storybook/client-logger" "7.0.24"
     "@storybook/global" "^5.0.0"
     memoizerific "^1.11.3"
-
-"@storybook/types@7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@storybook/types/-/types-7.0.23.tgz#08ae3223e97ed1baa9aa715745a05ae83311425c"
-  integrity sha512-ziszL3OfhTT5PHE7kiQjWWx3Lw3qro8eLX+56dXDNgmft5LS66yEANcaA7OzxLnEgdyWSxJqgrVo6r0JwHp2Eg==
-  dependencies:
-    "@storybook/channels" "7.0.23"
-    "@types/babel__core" "^7.0.0"
-    "@types/express" "^4.7.0"
-    file-system-cache "^2.0.0"
 
 "@storybook/types@7.0.24":
   version "7.0.24"
@@ -4099,14 +4039,6 @@ file-system-cache@2.3.0:
   dependencies:
     fs-extra "11.1.1"
     ramda "0.29.0"
-
-file-system-cache@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/file-system-cache/-/file-system-cache-2.0.2.tgz#6b51d58c5786302146fa883529e0d7f88896e948"
-  integrity sha512-lp4BHO4CWqvRyx88Tt3quZic9ZMf4cJyquYq7UI8sH42Bm2ArlBBjKQAalZOo+UfaBassb7X123Lik5qZ/tSAA==
-  dependencies:
-    fs-extra "^11.1.0"
-    ramda "^0.28.0"
 
 fill-range@^7.0.1:
   version "7.0.1"
@@ -8531,11 +8463,6 @@ ramda@0.29.0:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.29.0.tgz#fbbb67a740a754c8a4cbb41e2a6e0eb8507f55fb"
   integrity sha512-BBea6L67bYLtdbOqfp8f58fPMqEwx0doL+pAi8TZyp2YWz8R9G8z9x75CZI8W+ftqhFHCpEX2cRnUUXK130iKA==
 
-ramda@^0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.28.0.tgz#acd785690100337e8b063cab3470019be427cc97"
-  integrity sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==
-
 randexp@0.4.6:
   version "0.4.6"
   resolved "https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz"
@@ -8586,9 +8513,9 @@ react-element-to-jsx-string@^15.0.0:
     react-is "18.1.0"
 
 react-focus-lock@^2.9.3:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.9.4.tgz#4753f6dcd167c39050c9d84f9c63c71b3ff8462e"
-  integrity sha512-7pEdXyMseqm3kVjhdVH18sovparAzLg5h6WvIx7/Ck3ekjhrrDMEegHSa3swwC8wgfdd7DIdUVRGeiHT9/7Sgg==
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.9.5.tgz#8a82f4f0128cccc27b9e77a4472e8a22f1b52189"
+  integrity sha512-h6vrdgUbsH2HeD5I7I3Cx1PPrmwGuKYICS+kB9m+32X/9xHRrAbxgvaBpG7BFBN9h3tO+C3qX1QAVESmi4CiIA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     focus-lock "^0.11.6"
